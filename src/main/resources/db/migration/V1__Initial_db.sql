@@ -1,4 +1,5 @@
-create table message (
-    id bigserial primary key,
+create table message
+(
+    id   bigserial primary key,
     data varchar(1024)
 )
