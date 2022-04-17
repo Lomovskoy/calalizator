@@ -1,14 +1,19 @@
 package com.example.webflax.catalizator.domain;
 
+import lombok.AllArgsConstructor;
+import lombok.Data;
+import lombok.NoArgsConstructor;
+import org.springframework.data.annotation.Id;
+import org.springframework.data.relational.core.mapping.Table;
+
+@Data
+@Table
+@NoArgsConstructor
+@AllArgsConstructor
 public class Message {
 
-    private final String data;
+    @Id
+    private Long id;
 
-    public Message(String data) {
-        this.data = data;
-    }
-
-    public String getData() {
-        return data;
-    }
+    private String data;
 }
